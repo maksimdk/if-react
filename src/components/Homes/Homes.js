@@ -3,19 +3,20 @@ import React from 'react';
 import { Container } from '../Container';
 import { Row } from '../Row';
 import { Button } from '../Button';
+import { Card } from '../Card';
+import { Title } from '../Title';
 
 import { Arrow } from '../../icons';
 
 import { hotels } from './config';
 
 import './Homes.css';
-import { Card } from '../Card';
 
 export const Homes = () => {
   return (
     <section className="homes">
       <Container>
-        <h2 className="title homes__title">Homes guests loves</h2>
+        <Title className="homes__title">Homes guests loves</Title>
         <div className="homes__content">
           <Row className="homes__title">
             {hotels.map((data) => (
