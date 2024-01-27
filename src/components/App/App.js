@@ -12,7 +12,7 @@ export const App = () => {
     <>
       <Sprite />
       <TopSection setHotels={setHotels} />
-      {hotels.length > 0 ? <Available hotels={hotels} /> : null}
+      <Available hotels={hotels} />
       <Homes />
     </>
   );

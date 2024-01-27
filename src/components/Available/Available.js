@@ -11,8 +11,14 @@ export const Available = ({ hotels }) => {
   return (
     <section className="available">
       <Container>
-        <Title className="available__title">Available</Title>
-        <div className="available__content">
+        <Title className="available__title">
+          {hotels.length > 0 ? 'Available' : 'Nothing found!'}
+        </Title>
+
+        <div
+          className="available__content"
+          style={hotels.length > 0 ? { display: 'flex' } : { display: 'none' }}
+        >
           <Row className="available__cards">
             {hotels.map((data) => (
               <Card key={data.id} {...data}></Card>
