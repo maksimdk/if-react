@@ -1,13 +1,25 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import './styles/base/fonts.css';
+@import './styles/base/typography.css';
+@import './styles/base/reset.css';
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+@import './styles/abstracts/variables.css';
+@import './styles/abstracts/animations.css';
+
+@import './styles/layout/flex.css';
+
+@import './styles/components/button.css';
+@import './styles/components/container.css';
+@import './styles/components/arrow-btn.css';
+@import './styles/components/desktop-form.css';
+@import './styles/components/mobile-form.css';
+@import './styles/components/title.css';
+
+@import './styles/sections/header.css';
+@import './styles/sections/top-section.css';
+@import './styles/sections/available.css';
+@import './styles/sections/advantages.css';
+@import './styles/sections/homes.css';
+@import './styles/sections/destinatin.css';
+@import './styles/sections/sign-up.css';
+@import './styles/sections/reviews.css';
+@import './styles/sections/footer.css';
