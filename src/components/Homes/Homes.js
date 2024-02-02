@@ -18,7 +18,7 @@ export const Homes = () => {
       <Container>
         <Title className="homes__title">Homes guests loves</Title>
         <div className="homes__content">
-          <Row className="homes__title">
+          <Row className="homes__cards">
             {hotels.map((data) => (
               <Card key={data.id} {...data}></Card>
             ))}

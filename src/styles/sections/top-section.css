@@ -1,6 +1,6 @@
 .top-section {
   padding-top: 290px;
-  /*background: url('../../images/jpg/top-section/top-section.jpg') center;*/
+  background: url('/public/images/topSection.jpg') center;
   min-height: 100vh;
   background-size: cover;
   padding-bottom: var(--block-space);
@@ -18,6 +18,15 @@
   display: flex;
   justify-content: center;
   gap: var(--unit);
+}
+
+.ios {
+  width: 135px;
+  height: 40px;
+}
+.google {
+  width: 135px;
+  height: 40px;
 }
 
 @media (max-width: 1024px) {
