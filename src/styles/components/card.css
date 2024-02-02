@@ -1,0 +1,44 @@
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.card__img {
+  /*max-width: 296px;*/
+  width: 100%;
+  aspect-ratio: 1/1;
+  margin-bottom: 24px;
+}
+
+.card__link {
+  color: var(--accent-blue-color);
+  margin-bottom: 24px;
+}
+
+.card__text {
+  color: var(--secondary-text-color);
+}
+@media (max-width: 1024px) {
+  /*For mobile tablets:*/
+
+  .card__img {
+    margin-bottom: 12px;
+  }
+
+  .card__link {
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  /*For mobile phones:*/
+
+  .card__img {
+    margin-bottom: 8px;
+  }
+
+  .card__link {
+    margin-bottom: 4px;
+  }
+}
