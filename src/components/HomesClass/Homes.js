@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { getHotels } from '../../services/hotels';
+import { getHotels } from '../../services/hotels/getHotels';
 
 import { Container } from '../Container';
 import { Row } from '../Row';

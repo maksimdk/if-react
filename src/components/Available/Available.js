@@ -1,4 +1,5 @@
 import React from 'react';
+import classNames from 'classnames';
 
 import { Container } from '../Container';
 import { Row } from '../Row';
@@ -6,7 +7,6 @@ import { Card } from '../Card';
 import { Title } from '../Title';
 
 import './Available.css';
-import classNames from 'classnames';
 
 export const Available = ({ hotels }) => {
   const hasHotels = hotels.length > 0;
@@ -27,6 +27,7 @@ export const Available = ({ hotels }) => {
           })}
         >
           <Row className="available__cards">
+            {console.log(hotels)}
             {hotels.map((data) => (
               <Card key={data.id} {...data}></Card>
             ))}
