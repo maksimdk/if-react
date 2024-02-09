@@ -3,6 +3,5 @@ import axios from 'axios';
 
 export const getFilterHotels = async (search) => {
   const { data: hotels } = await axios.get(`${hotelsUrl}?search=${search}`);
-  console.log(hotels)
   return hotels;
 };

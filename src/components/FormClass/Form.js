@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+
+import { getFilterHotels } from '../../services/hotels/getFilterHotels';
+
 import { Label } from '../Label';
 import { Input } from '../Input';
 import { Button } from '../Button';
@@ -6,13 +9,13 @@ import { Button } from '../Button';
 import { filterHotels } from '../../helpers/filterHotels';
 
 import { data } from '../Available/config';
-import { getFilterHotels } from '../../services/hotels/getFilterHotels';
+import { hotels } from '../Homes/config';
 
 export class Form extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      searchHotels: [],
+      searchHotels: '',
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -24,8 +27,7 @@ export class Form extends Component {
     const { setHotels } = this.props;
 
     if (searchHotels !== prevState.searchHotels) {
-      // setHotels(filterHotels(data, searchHotels));
-      setHotels(getFilterHotels(searchHotels));
+      getFilterHotels(searchHotels).then((hotels) => setHotels(hotels));
     }
   }
 

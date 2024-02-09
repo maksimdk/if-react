@@ -27,7 +27,6 @@ export const Available = ({ hotels }) => {
           })}
         >
           <Row className="available__cards">
-            {console.log(hotels)}
             {hotels.map((data) => (
               <Card key={data.id} {...data}></Card>
             ))}
