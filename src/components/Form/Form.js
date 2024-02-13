@@ -9,8 +9,9 @@ import { data } from '../Available/config';
 
 export const Form = ({ setHotels }) => {
   const [searchHotels, setSearchHotels] = useState([]);
+
+
   const handleChange = (event) => {
-    console.log(event.target.value);
     setSearchHotels(event.target.value);
   };
 
