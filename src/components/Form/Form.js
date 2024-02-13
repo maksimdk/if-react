@@ -1,15 +1,19 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+
+import { getFilterHotels } from '../../services/hotels/getFilterHotels';
+
 import { Label } from '../Label';
 import { Input } from '../Input';
 import { Button } from '../Button';
 
-import { filterHotels } from '../../helpers/filterHotels';
-
-import { data } from '../Available/config';
-
 export const Form = ({ setHotels }) => {
-  const [searchHotels, setSearchHotels] = useState([]);
+  const [searchHotels, setSearchHotels] = useState('');
 
+  useEffect(() => {
+    if (searchHotels) {
+      getFilterHotels(searchHotels).then((hotels) => setHotels(hotels));
+    }
+  }, [searchHotels]);
 
   const handleChange = (event) => {
     setSearchHotels(event.target.value);
@@ -17,8 +21,7 @@ export const Form = ({ setHotels }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setHotels(filterHotels(data, searchHotels));
-    setSearchHotels([]);
+    setSearchHotels('');
   };
 
   return (
