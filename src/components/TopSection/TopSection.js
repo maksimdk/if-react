@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './TopSection.css';
-import { Form } from '../FormClass';
+import { Form } from '../Form';
 import { Link } from '../Link';
 import { Google, Ios } from '../../icons';
 

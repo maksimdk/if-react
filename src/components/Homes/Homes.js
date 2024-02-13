@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+
+import { getHotels } from '../../services/hotels/getHotels';
 
 import { Container } from '../Container';
 import { Row } from '../Row';
@@ -8,11 +10,15 @@ import { Title } from '../Title';
 
 import { Arrow } from '../../icons';
 
-import { hotels } from './config';
-
 import './Homes.css';
 
 export const Homes = () => {
+  const [hotels, setHotels] = useState([]);
+
+  useEffect(() => {
+    getHotels().then((data) => setHotels(data));
+  }, []);
+
   return (
     <section className="homes">
       <Container>

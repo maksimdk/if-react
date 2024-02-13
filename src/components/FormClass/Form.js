@@ -6,10 +6,7 @@ import { Label } from '../Label';
 import { Input } from '../Input';
 import { Button } from '../Button';
 
-import { filterHotels } from '../../helpers/filterHotels';
 
-import { data } from '../Available/config';
-import { hotels } from '../Homes/config';
 
 export class Form extends Component {
   constructor(props) {
