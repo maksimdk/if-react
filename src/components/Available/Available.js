@@ -1,6 +1,8 @@
 import React from 'react';
 import classNames from 'classnames';
 
+import { useAvailableContext } from './Available.context';
+
 import { Container } from '../Container';
 import { Row } from '../Row';
 import { Card } from '../Card';
@@ -8,7 +10,9 @@ import { Title } from '../Title';
 
 import './Available.css';
 
-export const Available = ({ hotels }) => {
+export const Available = () => {
+  const { hotels } = useAvailableContext();
+
   const hasHotels = hotels.length > 0;
 
   return (

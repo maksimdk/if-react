@@ -5,7 +5,7 @@ import { Form } from '../Form';
 import { Link } from '../Link';
 import { Google, Ios } from '../../icons';
 
-export const TopSection = ({ setHotels }) => {
+export const TopSection = () => {
   return (
     <section className="top-section">
       <div className="container">
@@ -13,7 +13,7 @@ export const TopSection = ({ setHotels }) => {
           Discover stays to&nbsp;live,&nbsp;work or just relax
         </h1>
 
-        <Form setHotels={setHotels} />
+        <Form />
 
         <div className="top-section__download">
           <Link>

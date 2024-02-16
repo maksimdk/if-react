@@ -2,11 +2,14 @@ import React, { useEffect, useState } from 'react';
 
 import { getFilterHotels } from '../../services/hotels/getFilterHotels';
 
+import { useAvailableContext } from '../Available/Available.context';
+
 import { Label } from '../Label';
 import { Input } from '../Input';
 import { Button } from '../Button';
 
-export const Form = ({ setHotels }) => {
+export const Form = () => {
+  const { setHotels } = useAvailableContext();
   const [searchHotels, setSearchHotels] = useState('');
 
   useEffect(() => {
@@ -25,12 +28,7 @@ export const Form = ({ setHotels }) => {
   };
 
   return (
-    <form
-      className="top-section__form-search form"
-      action="/"
-      method="get"
-      onSubmit={handleSubmit}
-    >
+    <form className="top-section__form-search form" onSubmit={handleSubmit}>
       <div className="form__input form__destination">
         <Label className="label" htmlFor="destination">
           Your destination or hotel name
