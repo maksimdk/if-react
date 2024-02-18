@@ -7,6 +7,7 @@ import { useAvailableContext } from '../Available/Available.context';
 import { Label } from '../Label';
 import { Input } from '../Input';
 import { Button } from '../Button';
+import { Calendar } from '../Calendar';
 
 export const Form = () => {
   const { setHotels } = useAvailableContext();
@@ -46,15 +47,15 @@ export const Form = () => {
         <Label className="label" htmlFor="dates">
           Check-in — Check-out
         </Label>
-
-        <input
-          className="input input--dates"
-          required
-          id="dates"
-          type="text"
-          name="dates"
-          value="Tue 15 Sept − Sat 19 Sept"
-        />
+        <Calendar />
+        {/*<input*/}
+        {/*  className="input input--dates"*/}
+        {/*  required*/}
+        {/*  id="dates"*/}
+        {/*  type="text"*/}
+        {/*  name="dates"*/}
+        {/*  value="Tue 15 Sept − Sat 19 Sept"*/}
+        {/*/>*/}
       </div>
       <div className="form__input form__param">
         <Label className="label" htmlFor="param"></Label>
